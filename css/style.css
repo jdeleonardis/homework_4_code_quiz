@@ -33,6 +33,7 @@ header {
 /*font for the screen container div*/
 #screenContainer{  
     font-size: 1em;
+    font-weight: 600;
 }
 
 .hide {
@@ -41,6 +42,16 @@ header {
 
 .show {
     display: block;
+}
+
+.incorrect {
+    color: red;
+    font-weight: 600;
+}
+
+.correct {
+    color: black;
+    font-weight: 600;
 }
 
 /*styling for the question buttons, objects are li's in js*/

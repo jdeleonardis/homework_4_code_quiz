@@ -85,6 +85,7 @@ function answerChecker(event){
     if (choice.textContent === question[questionIndex].correctAnswer){
       quizScore++;
       currentResultEl.textContent = "Correct!";
+      currentResultEl.setAttribute("class", "correct");
     }
     //answer is incorrect - deduct 10 seconds from teh timer, display incorrect message.
     else {
@@ -93,6 +94,7 @@ function answerChecker(event){
         countDownTimer = 0;
       }
       currentResultEl.textContent = "Incorrect!  10 seconds deducted!";
+      currentResultEl.setAttribute("class", "incorrect");
     }
 
     questionIndex++;
