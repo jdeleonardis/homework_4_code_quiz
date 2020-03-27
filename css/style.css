@@ -1,0 +1,36 @@
+#mainForm{
+    margin-left: 25%;
+    width: 50%;
+    text-align: left;
+    padding: 50px 50px 100px 50px;
+}
+
+.timer{
+    float:right;
+}
+
+#scores{
+    float: left;
+}
+
+#timerDisplay{
+    margin-left: 5px;
+    margin-top: 0px;
+    margin-right: 10px;
+    float: right;
+}
+
+#startScreen{  
+    font-size: 1.2em;
+    /* border: 2px solid red; */
+}
+
+li {
+    padding-top: 10px;
+    list-style-type: none
+}
+
+input {
+    display: block;
+    margin-bottom: 20px;
+}
