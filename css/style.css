@@ -3,15 +3,20 @@
     width: 50%;
     text-align: left;
     padding: 50px 50px 100px 50px;
+    margin-top: 10px;
+    border-style: solid;
 }
 
+/*timer styling*/
 .timer{
-    float:right;
+    float: right;
 }
 
-#scores{
-    float: left;
+header {
+    height: 50px;
+    /* background: green; */
 }
+
 
 #timerDisplay{
     margin-left: 5px;
@@ -20,17 +25,59 @@
     float: right;
 }
 
-#startScreen{  
-    font-size: 1.2em;
-    /* border: 2px solid red; */
+/*score styling*/
+#scores{
+    float: left;
 }
 
+/*font for the screen container div*/
+#screenContainer{  
+    font-size: 1em;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+/*styling for the question buttons, objects are li's in js*/
 li {
     padding-top: 10px;
-    list-style-type: none
+    /* list-style-type: none */
 }
 
+/*input styling for entering name*/
 input {
     display: block;
     margin-bottom: 20px;
+}
+
+
+/* A Media Query max-width: 786px */
+@media screen and (max-width: 786px) {
+    /* Resized content to fit 640px  */
+    #mainForm {
+        min-width: 475px;
+        margin-left: 15%;
+    }
+    .btn-primary {
+        width: auto;
+        font-size: 1rem;
+    }
+}
+
+/* A Media Query max-width: 640px */
+@media screen and (max-width: 640px) {
+    /* Resized content to fit 640px  */
+    #mainForm {
+        min-width: 350px;
+        margin-left: 15%;
+    }
+    .btn-primary {
+        width: auto;
+        font-size: 12px;
+    }
 }

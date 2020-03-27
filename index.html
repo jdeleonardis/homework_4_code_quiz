@@ -4,35 +4,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
     <title>Code Quiz</title>
-    <!-- Added link to the jQuery Library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-    <!-- Added a link to Bootstrap-->
+    <!-- Link to Bootstrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-
-    <!-- Added a link to our external stylesheet-->
+    <!-- My css-->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <div id="scores">
-        <a href="#" id = "viewHighScore" class = "">View High Score</a>
-        <p class="results">Score: <span id="currentScore"></span></p>
-        <!-- <p class="results"><span id="currentResult"></span></p> -->
-    </div>
-
-    <p class="timer" id="timerP">Time: <span id="timerDisplay"></span></p>
+    <header>
+        <div id="scores">
+            <a href="#" id = "highScoreLink" class = "show">View High Scores</a>
+            <p class = "results show" id= results>Score: <span id="currentScore"></span></p>
+        </div>
     
+        <p class = "timer show" id="timerP">Time: <span id="timerDisplay"></span></p>
+    </header>
+
     <form id="mainForm">        
-        <div id="startScreen">
+        <div id = "screenContainer" class = "show">
           <h1 class="codeQuiz">Code Quiz</h1>
           <p>You will have 60 seconds to answer five questions. Every wrong answer will deduct 10 seconds from the time remaining. Good Luck!</p>
           <button id="startBtn" class = "btn btn-primary">Start Quiz</button>
         </div>
+        
+        <!-- div used to display correct or incorrect -->
         <div id="questionFeedBack"></div>
+        
+        <!-- div used to show the high scores.  starts off hidden-->
+        <div id = "highScoreScreen" class = "hide">
+            <h1 class="highScoreH1">High Scores</h1>
+            <p>Here are high scores</p>
+            <button id="clearHighScoresBtn" class = "btn btn-primary">Clear High Scores</button>
+        </div>
     </form>
+
 
     <script src="script/questions.js"></script>
     <script src="script/script.js"></script>
