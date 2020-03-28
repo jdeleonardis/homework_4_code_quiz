@@ -30,6 +30,10 @@ header {
     float: left;
 }
 
+#returnToQuizBtn {
+    margin-left: 5px;
+}
+
 /*font for the screen container div*/
 #screenContainer{  
     font-size: 1em;
@@ -58,6 +62,10 @@ header {
 li {
     padding-top: 10px;
     /* list-style-type: none */
+}
+
+.highScoreListItem {
+    list-style-type: none
 }
 
 /*input styling for entering name*/

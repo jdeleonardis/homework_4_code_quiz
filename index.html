@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Code Quiz</title>
     <!-- Link to Bootstrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
@@ -33,9 +34,13 @@
         
         <!-- div used to show the high scores.  starts off hidden-->
         <div id = "highScoreScreen" class = "hide">
-            <h1 class="highScoreH1">High Scores</h1>
-            <p>Here are high scores</p>
-            <button id="clearHighScoresBtn" class = "btn btn-primary">Clear High Scores</button>
+            <div id = "highScoreList">
+                <h1 class="highScoreH1">High Scores</h1>                
+            </div>
+            <div id = "highScoreButtons">
+                <button id="clearHighScoresBtn" class = "btn btn-primary">Clear High Scores</button>
+                <button id="returnGameBtn" class = "btn btn-primary">Return To Quiz</button>
+            </div>
         </div>
     </form>
 
