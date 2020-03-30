@@ -25,6 +25,10 @@ header {
     float: right;
 }
 
+#questionFeedBack{
+    font-style: italic;
+}
+
 /*score styling*/
 #scores{
     float: left;
