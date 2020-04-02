@@ -100,7 +100,7 @@ function clearHighScores(event) {
 function showQuestion(questionIndex){
   screenContainerEl.textContent = "";
   olHolderEl.textContent = "";
-  var answerCounter = 0;
+  //var answerCounter = 0;
 
   //get the question and array of answers at the question index
   var userQuestion = question[questionIndex].questionTitle;
@@ -109,10 +109,9 @@ function showQuestion(questionIndex){
   screenContainerEl.textContent = userQuestion;
 
   //Add the possible answers to the screen for each question
-  possibleAnswers.forEach(function (newListItem) {
+  possibleAnswers.forEach(function (newListItem, arrayIndex) {
     var answerRow = document.createElement("li");
-    answerRow.setAttribute("data-index", answerCounter)
-    answerCounter++;
+    answerRow.setAttribute("data-index", arrayIndex)
     answerRow.innerHTML = ' <button id="answerBtn" class="btn btn-primary">' + newListItem + '</button>';
     screenContainerEl.appendChild(olHolderEl);
     olHolderEl.appendChild(answerRow);
