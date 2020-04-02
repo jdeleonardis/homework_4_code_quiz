@@ -47,13 +47,14 @@ function viewHighScores(event){
     viewHighScoreEl.textContent = "Back to quiz";
 
     olHighScoreHolderEl.textContent = "";
+    highScoreListEl.appendChild(olHighScoreHolderEl);
     var highScores = JSON.parse(window.localStorage.getItem('scores'));    
     highScores.sort(function(a, b){return b.score - a.score});
     for (i = 0; i < highScores.length; i++) {
       var highScoreRow = document.createElement("li");
       highScoreRow.setAttribute("class","highScoreListItem");
       highScoreRow.textContent = highScores[i].score + " - " + highScores[i].name;
-      highScoreListEl.appendChild(olHighScoreHolderEl);
+//      highScoreListEl.appendChild(olHighScoreHolderEl);
       olHighScoreHolderEl.appendChild(highScoreRow);
     }
   }
@@ -106,13 +107,13 @@ function showQuestion(questionIndex){
   var possibleAnswers = question[questionIndex].answerChoices;
   //add the question to the start screen div
   screenContainerEl.textContent = userQuestion;
+  screenContainerEl.appendChild(olHolderEl);
 
   //Add the possible answers to the screen for each question
   possibleAnswers.forEach(function (newListItem, arrayIndex) {
     var answerRow = document.createElement("li");
     answerRow.setAttribute("data-index", arrayIndex)
     answerRow.innerHTML = ' <button id="answerBtn" class="btn btn-primary">' + newListItem + '</button>';
-    screenContainerEl.appendChild(olHolderEl);
     olHolderEl.appendChild(answerRow);
   })
 }
