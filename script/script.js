@@ -100,7 +100,6 @@ function clearHighScores(event) {
 function showQuestion(questionIndex){
   screenContainerEl.textContent = "";
   olHolderEl.textContent = "";
-  //var answerCounter = 0;
 
   //get the question and array of answers at the question index
   var userQuestion = question[questionIndex].questionTitle;
